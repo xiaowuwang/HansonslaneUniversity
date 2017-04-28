@@ -12,9 +12,9 @@ namespace HansonslaneUniversity.Controllers
 {
     public class StudentsController : Controller
     {
-        private readonly SchoolDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public StudentsController(SchoolDbContext context)
+        public StudentsController(ApplicationDbContext context)
         {
             _context = context;    
         }

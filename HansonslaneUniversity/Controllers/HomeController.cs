@@ -11,9 +11,9 @@ namespace HansonslaneUniversity.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly SchoolDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(SchoolDbContext context)
+        public HomeController(ApplicationDbContext context)
         {
             _context = context;
         }
