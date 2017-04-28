@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HansonslaneUniversity.Data;
 using HansonslaneUniversity.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HansonslaneUniversity.Controllers
 {
+    [Authorize]
     public class DepartmentsController : Controller
     {
         private readonly ApplicationDbContext _context;
