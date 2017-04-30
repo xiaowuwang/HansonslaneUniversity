@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using HansonslaneUniversity.Data;
 using HansonslaneUniversity.Models;
 using HansonslaneUniversity.Models.SchoolViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HansonslaneUniversity.Controllers
 {
+    [Authorize]
     public class InstructorsController : Controller
     {
         private readonly ApplicationDbContext _context;
