@@ -37,7 +37,12 @@
                     <li><a asp-area="" asp-controller="Students" asp-action="Index">Students</a></li>
                     <li><a asp-area="" asp-controller="Courses" asp-action="Index">Courses</a></li>
                     <li><a asp-area="" asp-controller="Instructors" asp-action="Index">Instructors</a></li>
-                    <li><a asp-area="" asp-controller="Departments" asp-action="Index">Departments</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-area="" asp-controller="Departments" asp-action="Index">Departments</a></li>
+                        @*<li>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</li>
+                        <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>*@
+                    }
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
